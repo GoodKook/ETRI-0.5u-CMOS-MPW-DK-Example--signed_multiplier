@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sun Jun  9 03:38:28 2024
+[*]
+[dumpfile] "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/signed_multiplier/emulation/sc_signed_mult8_TB.vcd"
+[dumpfile_mtime] "Sun Jun  9 03:37:57 2024"
+[dumpfile_size] 147456
+[savefile] "/home/goodkook/ETRI050_DesignKit/devel/Ref_Design/signed_multiplier/emulation/sc_signed_mult8_TB.gtkw"
+[timestart] 0
+[size] 1147 600
+[pos] 0 177
+*-18.502430 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 214
+[signals_width] 134
+[sst_expanded] 1
+[sst_vpaned_height] 152
+@28
+SystemC.clk
+@420
+SystemC.ABin[7:0]
+@28
+SystemC.ABSel
+@420
+SystemC.RES_dut[15:0]
+@421
+SystemC.RES_emu[15:0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,2202 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.41+111 (git sha1 4b67f3757, clang++ 10.0.0-4ubuntu1 -fPIC -Os)
+
+-- Executing script file `signed_mult8_wrapper.ys' --
+
+1. Executing Verilog-2005 frontend: ../../signed_mult8_wrapper.v
+Parsing Verilog input from `../../signed_mult8_wrapper.v' to AST representation.
+Generating RTLIL representation for module `\signed_mult8_wrapper'.
+Warning: Replacing memory \vectOut with list of registers. See ../../signed_mult8_wrapper.v:53
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: ../../../source/signed_mult8.v
+Parsing Verilog input from `../../../source/signed_mult8.v' to AST representation.
+Generating RTLIL representation for module `\signed_mult8'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: ../../../source/signed_multiplier.v
+Parsing Verilog input from `../../../source/signed_multiplier.v' to AST representation.
+Generating RTLIL representation for module `\signed_multiplier'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \signed_mult8_wrapper
+Used module:     \signed_mult8
+Used module:         \signed_multiplier
+Parameter \WIDTHA = 8
+Parameter \WIDTHB = 8
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\signed_multiplier'.
+Parameter \WIDTHA = 8
+Parameter \WIDTHB = 8
+Generating RTLIL representation for module `$paramod$54113f86de8fd50f9af95c150d05a92c3f7bb662\signed_multiplier'.
+
+4.3. Analyzing design hierarchy..
+Top module:  \signed_mult8_wrapper
+Used module:     \signed_mult8
+Used module:         $paramod$54113f86de8fd50f9af95c150d05a92c3f7bb662\signed_multiplier
+
+4.4. Analyzing design hierarchy..
+Top module:  \signed_mult8_wrapper
+Used module:     \signed_mult8
+Used module:         $paramod$54113f86de8fd50f9af95c150d05a92c3f7bb662\signed_multiplier
+Removing unused module `\signed_multiplier'.
+Removed 1 unused modules.
+
+5. Executing SYNTH_GOWIN pass.
+
+5.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/cells_sim.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\__APICULA_LUT5'.
+Generating RTLIL representation for module `\__APICULA_LUT6'.
+Generating RTLIL representation for module `\__APICULA_LUT7'.
+Generating RTLIL representation for module `\__APICULA_LUT8'.
+Generating RTLIL representation for module `\MUX2'.
+Generating RTLIL representation for module `\MUX2_LUT5'.
+Generating RTLIL representation for module `\MUX2_LUT6'.
+Generating RTLIL representation for module `\MUX2_LUT7'.
+Generating RTLIL representation for module `\MUX2_LUT8'.
+Generating RTLIL representation for module `\DFF'.
+Generating RTLIL representation for module `\DFFE'.
+Generating RTLIL representation for module `\DFFS'.
+Generating RTLIL representation for module `\DFFSE'.
+Generating RTLIL representation for module `\DFFR'.
+Generating RTLIL representation for module `\DFFRE'.
+Generating RTLIL representation for module `\DFFP'.
+Generating RTLIL representation for module `\DFFPE'.
+Generating RTLIL representation for module `\DFFC'.
+Generating RTLIL representation for module `\DFFCE'.
+Generating RTLIL representation for module `\DFFN'.
+Generating RTLIL representation for module `\DFFNE'.
+Generating RTLIL representation for module `\DFFNS'.
+Generating RTLIL representation for module `\DFFNSE'.
+Generating RTLIL representation for module `\DFFNR'.
+Generating RTLIL representation for module `\DFFNRE'.
+Generating RTLIL representation for module `\DFFNP'.
+Generating RTLIL representation for module `\DFFNPE'.
+Generating RTLIL representation for module `\DFFNC'.
+Generating RTLIL representation for module `\DFFNCE'.
+Generating RTLIL representation for module `\VCC'.
+Generating RTLIL representation for module `\GND'.
+Generating RTLIL representation for module `\IBUF'.
+Generating RTLIL representation for module `\OBUF'.
+Generating RTLIL representation for module `\TBUF'.
+Generating RTLIL representation for module `\IOBUF'.
+Generating RTLIL representation for module `\ELVDS_OBUF'.
+Generating RTLIL representation for module `\TLVDS_OBUF'.
+Generating RTLIL representation for module `\OSER4'.
+Generating RTLIL representation for module `\OSER8'.
+Generating RTLIL representation for module `\OSER10'.
+Generating RTLIL representation for module `\OVIDEO'.
+Generating RTLIL representation for module `\OSER16'.
+Generating RTLIL representation for module `\IDES4'.
+Generating RTLIL representation for module `\IDES8'.
+Generating RTLIL representation for module `\IDES10'.
+Generating RTLIL representation for module `\IVIDEO'.
+Generating RTLIL representation for module `\IDES16'.
+Generating RTLIL representation for module `\IDDR'.
+Generating RTLIL representation for module `\IDDRC'.
+Generating RTLIL representation for module `\ODDR'.
+Generating RTLIL representation for module `\ODDRC'.
+Generating RTLIL representation for module `\GSR'.
+Generating RTLIL representation for module `\ALU'.
+Generating RTLIL representation for module `\RAM16S1'.
+Generating RTLIL representation for module `\RAM16S2'.
+Generating RTLIL representation for module `\RAM16S4'.
+Generating RTLIL representation for module `\RAM16SDP1'.
+Generating RTLIL representation for module `\RAM16SDP2'.
+Generating RTLIL representation for module `\RAM16SDP4'.
+Generating RTLIL representation for module `\SP'.
+Generating RTLIL representation for module `\SPX9'.
+Generating RTLIL representation for module `\SDP'.
+Generating RTLIL representation for module `\SDPX9'.
+Generating RTLIL representation for module `\DP'.
+Generating RTLIL representation for module `\DPX9'.
+Generating RTLIL representation for module `\rPLL'.
+Generating RTLIL representation for module `\PLLVR'.
+Generating RTLIL representation for module `\OSC'.
+Generating RTLIL representation for module `\OSCZ'.
+Generating RTLIL representation for module `\OSCF'.
+Generating RTLIL representation for module `\OSCH'.
+Generating RTLIL representation for module `\OSCW'.
+Generating RTLIL representation for module `\OSCO'.
+Successfully finished Verilog frontend.
+
+5.2. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/cells_xtra.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/cells_xtra.v' to AST representation.
+Generating RTLIL representation for module `\MUX2_MUX8'.
+Generating RTLIL representation for module `\MUX2_MUX16'.
+Generating RTLIL representation for module `\MUX2_MUX32'.
+Generating RTLIL representation for module `\MUX4'.
+Generating RTLIL representation for module `\MUX8'.
+Generating RTLIL representation for module `\MUX16'.
+Generating RTLIL representation for module `\MUX32'.
+Generating RTLIL representation for module `\LUT5'.
+Generating RTLIL representation for module `\LUT6'.
+Generating RTLIL representation for module `\LUT7'.
+Generating RTLIL representation for module `\LUT8'.
+Generating RTLIL representation for module `\DL'.
+Generating RTLIL representation for module `\DLE'.
+Generating RTLIL representation for module `\DLC'.
+Generating RTLIL representation for module `\DLCE'.
+Generating RTLIL representation for module `\DLP'.
+Generating RTLIL representation for module `\DLPE'.
+Generating RTLIL representation for module `\DLN'.
+Generating RTLIL representation for module `\DLNE'.
+Generating RTLIL representation for module `\DLNC'.
+Generating RTLIL representation for module `\DLNCE'.
+Generating RTLIL representation for module `\DLNP'.
+Generating RTLIL representation for module `\DLNPE'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\IODELAY'.
+Generating RTLIL representation for module `\IEM'.
+Generating RTLIL representation for module `\ROM16'.
+Generating RTLIL representation for module `\ROM'.
+Generating RTLIL representation for module `\ROMX9'.
+Generating RTLIL representation for module `\rSDP'.
+Generating RTLIL representation for module `\rSDPX9'.
+Generating RTLIL representation for module `\rROM'.
+Generating RTLIL representation for module `\rROMX9'.
+Generating RTLIL representation for module `\pROM'.
+Generating RTLIL representation for module `\pROMX9'.
+Generating RTLIL representation for module `\SDPB'.
+Generating RTLIL representation for module `\SDPX9B'.
+Generating RTLIL representation for module `\DPB'.
+Generating RTLIL representation for module `\DPX9B'.
+Generating RTLIL representation for module `\PADD18'.
+Generating RTLIL representation for module `\PADD9'.
+Generating RTLIL representation for module `\MULT9X9'.
+Generating RTLIL representation for module `\MULT18X18'.
+Generating RTLIL representation for module `\MULT36X36'.
+Generating RTLIL representation for module `\MULTALU36X18'.
+Generating RTLIL representation for module `\MULTADDALU18X18'.
+Generating RTLIL representation for module `\MULTALU18X18'.
+Generating RTLIL representation for module `\ALU54D'.
+Generating RTLIL representation for module `\BUFG'.
+Generating RTLIL representation for module `\BUFS'.
+Generating RTLIL representation for module `\PLL'.
+Generating RTLIL representation for module `\TLVDS_IBUF'.
+Generating RTLIL representation for module `\TLVDS_TBUF'.
+Generating RTLIL representation for module `\TLVDS_IOBUF'.
+Generating RTLIL representation for module `\ELVDS_IBUF'.
+Generating RTLIL representation for module `\ELVDS_TBUF'.
+Generating RTLIL representation for module `\ELVDS_IOBUF'.
+Generating RTLIL representation for module `\MIPI_IBUF'.
+Generating RTLIL representation for module `\MIPI_IBUF_HS'.
+Generating RTLIL representation for module `\MIPI_IBUF_LP'.
+Generating RTLIL representation for module `\MIPI_OBUF'.
+Generating RTLIL representation for module `\MIPI_OBUF_A'.
+Generating RTLIL representation for module `\I3C_IOBUF'.
+Generating RTLIL representation for module `\CLKDIV'.
+Generating RTLIL representation for module `\DHCEN'.
+Generating RTLIL representation for module `\DLL'.
+Generating RTLIL representation for module `\DLLDLY'.
+Generating RTLIL representation for module `\FLASH96K'.
+Generating RTLIL representation for module `\FLASH256K'.
+Generating RTLIL representation for module `\FLASH608K'.
+Generating RTLIL representation for module `\DCS'.
+Generating RTLIL representation for module `\DQCE'.
+Generating RTLIL representation for module `\FLASH128K'.
+Generating RTLIL representation for module `\MCU'.
+Generating RTLIL representation for module `\USB20_PHY'.
+Generating RTLIL representation for module `\ADC'.
+Generating RTLIL representation for module `\BANDGAP'.
+Generating RTLIL representation for module `\CLKDIV2'.
+Generating RTLIL representation for module `\DCC'.
+Generating RTLIL representation for module `\DHCENC'.
+Generating RTLIL representation for module `\EMCU'.
+Generating RTLIL representation for module `\FLASH64K'.
+Generating RTLIL representation for module `\FLASH64KZ'.
+Generating RTLIL representation for module `\I3C'.
+Generating RTLIL representation for module `\IODELAYA'.
+Generating RTLIL representation for module `\IODELAYC'.
+Generating RTLIL representation for module `\SPMI'.
+Generating RTLIL representation for module `\IODELAYB'.
+Generating RTLIL representation for module `\PLLO'.
+Generating RTLIL representation for module `\DCCG'.
+Generating RTLIL representation for module `\FLASH96KA'.
+Generating RTLIL representation for module `\MIPI_DPHY_RX'.
+Generating RTLIL representation for module `\CLKDIVG'.
+Successfully finished Verilog frontend.
+
+5.3. Executing HIERARCHY pass (managing design hierarchy).
+
+5.3.1. Analyzing design hierarchy..
+Top module:  \signed_mult8_wrapper
+Used module:     \signed_mult8
+Used module:         $paramod$54113f86de8fd50f9af95c150d05a92c3f7bb662\signed_multiplier
+
+5.3.2. Analyzing design hierarchy..
+Top module:  \signed_mult8_wrapper
+Used module:     \signed_mult8
+Used module:         $paramod$54113f86de8fd50f9af95c150d05a92c3f7bb662\signed_multiplier
+Removed 0 unused modules.
+
+5.4. Executing PROC pass (convert processes to netlists).
+
+5.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$254'.
+Cleaned up 1 empty switch.
+
+5.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314 in module RAM16S4.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278 in module RAM16S2.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$259 in module RAM16S1.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$250 in module DFFNCE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$248 in module DFFNC.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$246 in module DFFNPE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$244 in module DFFNP.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$242 in module DFFNRE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$240 in module DFFNR.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$238 in module DFFNSE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$236 in module DFFNS.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$230 in module DFFCE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$228 in module DFFC.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$226 in module DFFPE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$224 in module DFFP.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$222 in module DFFRE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$220 in module DFFR.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$218 in module DFFSE.
+Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$216 in module DFFS.
+Marked 1 switch rules as full_case in process $proc$../../../source/signed_mult8.v:16$25 in module signed_mult8.
+Removed 1 dead cases from process $proc$../../signed_mult8_wrapper.v:44$4 in module signed_mult8_wrapper.
+Marked 3 switch rules as full_case in process $proc$../../signed_mult8_wrapper.v:44$4 in module signed_mult8_wrapper.
+Removed a total of 1 dead cases.
+
+5.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 8 redundant assignments.
+Promoted 61 assignments to connections.
+
+5.4.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$359'.
+  Set init value: \mem0 = 16'0000000000000000
+  Set init value: \mem1 = 16'0000000000000000
+  Set init value: \mem2 = 16'0000000000000000
+  Set init value: \mem3 = 16'0000000000000000
+Found init rule in `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$301'.
+  Set init value: \mem0 = 16'0000000000000000
+  Set init value: \mem1 = 16'0000000000000000
+Found init rule in `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$271'.
+  Set init value: \mem = 16'0000000000000000
+Found init rule in `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$251'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$249'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$247'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$245'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$243'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$241'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$239'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$237'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$235'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$233'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$231'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$229'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$227'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$225'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$223'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$221'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$219'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$217'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$215'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$213'.
+  Set init value: \Q = 1'0
+
+5.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \CLEAR in `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$250'.
+Found async reset \CLEAR in `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$248'.
+Found async reset \PRESET in `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$246'.
+Found async reset \PRESET in `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$244'.
+Found async reset \CLEAR in `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$230'.
+Found async reset \CLEAR in `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$228'.
+Found async reset \PRESET in `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$226'.
+Found async reset \PRESET in `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$224'.
+
+5.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~25 debug messages>
+
+5.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$359'.
+Creating decoders for process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+     1/8: $1$lookahead\mem3$313[15:0]$330
+     2/8: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1075$305[3:0]$326
+     3/8: $1$lookahead\mem2$312[15:0]$329
+     4/8: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1074$304[3:0]$325
+     5/8: $1$lookahead\mem1$311[15:0]$328
+     6/8: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1073$303[3:0]$324
+     7/8: $1$lookahead\mem0$310[15:0]$327
+     8/8: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1072$302[3:0]$323
+Creating decoders for process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$301'.
+Creating decoders for process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278'.
+     1/4: $1$lookahead\mem1$277[15:0]$286
+     2/4: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1028$273[3:0]$284
+     3/4: $1$lookahead\mem0$276[15:0]$285
+     4/4: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1027$272[3:0]$283
+Creating decoders for process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$271'.
+Creating decoders for process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$259'.
+     1/2: $1$lookahead\mem$258[15:0]$263
+     2/2: $1$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:989$256[3:0]$262
+Creating decoders for process `\ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$254'.
+Creating decoders for process `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$251'.
+Creating decoders for process `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$250'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$249'.
+Creating decoders for process `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$248'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$247'.
+Creating decoders for process `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$246'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$245'.
+Creating decoders for process `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$244'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$243'.
+Creating decoders for process `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$242'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$241'.
+Creating decoders for process `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$240'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$239'.
+Creating decoders for process `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$238'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$237'.
+Creating decoders for process `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$236'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$235'.
+Creating decoders for process `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:381$234'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$233'.
+Creating decoders for process `\DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:366$232'.
+Creating decoders for process `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$231'.
+Creating decoders for process `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$230'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$229'.
+Creating decoders for process `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$228'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$227'.
+Creating decoders for process `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$226'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$225'.
+Creating decoders for process `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$224'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$223'.
+Creating decoders for process `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$222'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$221'.
+Creating decoders for process `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$220'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$219'.
+Creating decoders for process `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$218'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$217'.
+Creating decoders for process `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$216'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$215'.
+Creating decoders for process `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:194$214'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$213'.
+Creating decoders for process `\DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:179$212'.
+Creating decoders for process `\signed_mult8.$proc$../../../source/signed_mult8.v:16$25'.
+     1/2: $0\B[7:0]
+     2/2: $0\A[7:0]
+Creating decoders for process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+     1/17: $3$mem2reg_rd$\vectOut$../../signed_mult8_wrapper.v:59$1_DATA[7:0]$24
+     2/17: $2$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$23
+     3/17: $2$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_DATA[7:0]$22
+     4/17: $2$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_ADDR[2:0]$21
+     5/17: $2$mem2reg_rd$\vectOut$../../signed_mult8_wrapper.v:59$1_DATA[7:0]$20
+     6/17: $2$mem2reg_rd$\vectOut$../../signed_mult8_wrapper.v:59$1_ADDR[0:0]$19
+     7/17: $1$mem2bits$\stimIn$../../signed_mult8_wrapper.v:49$2[7:0]$13
+     8/17: $1$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$16
+     9/17: $1$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_DATA[7:0]$15
+    10/17: $1$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_ADDR[2:0]$14
+    11/17: $1$mem2reg_rd$\vectOut$../../signed_mult8_wrapper.v:59$1_DATA[7:0]$12
+    12/17: $1$mem2reg_rd$\vectOut$../../signed_mult8_wrapper.v:59$1_ADDR[0:0]$11
+    13/17: $0\vectOut[1][7:0]
+    14/17: $0\vectOut[0][7:0]
+    15/17: $0\ABin[7:0]
+    16/17: $0\ABSel[0:0]
+    17/17: $0\Dout_emu[7:0]
+
+5.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\RAM16S4.\mem0' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$540' with positive edge clock.
+Creating register for signal `\RAM16S4.\mem1' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$541' with positive edge clock.
+Creating register for signal `\RAM16S4.\mem2' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$542' with positive edge clock.
+Creating register for signal `\RAM16S4.\mem3' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$543' with positive edge clock.
+Creating register for signal `\RAM16S4.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1072$302' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$544' with positive edge clock.
+Creating register for signal `\RAM16S4.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1073$303' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$545' with positive edge clock.
+Creating register for signal `\RAM16S4.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1074$304' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$546' with positive edge clock.
+Creating register for signal `\RAM16S4.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1075$305' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$547' with positive edge clock.
+Creating register for signal `\RAM16S4.$lookahead\mem0$310' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$548' with positive edge clock.
+Creating register for signal `\RAM16S4.$lookahead\mem1$311' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$549' with positive edge clock.
+Creating register for signal `\RAM16S4.$lookahead\mem2$312' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$550' with positive edge clock.
+Creating register for signal `\RAM16S4.$lookahead\mem3$313' using process `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+  created $dff cell `$procdff$551' with positive edge clock.
+Creating register for signal `\RAM16S2.\mem0' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278'.
+  created $dff cell `$procdff$552' with positive edge clock.
+Creating register for signal `\RAM16S2.\mem1' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278'.
+  created $dff cell `$procdff$553' with positive edge clock.
+Creating register for signal `\RAM16S2.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1027$272' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278'.
+  created $dff cell `$procdff$554' with positive edge clock.
+Creating register for signal `\RAM16S2.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1028$273' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278'.
+  created $dff cell `$procdff$555' with positive edge clock.
+Creating register for signal `\RAM16S2.$lookahead\mem0$276' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278'.
+  created $dff cell `$procdff$556' with positive edge clock.
+Creating register for signal `\RAM16S2.$lookahead\mem1$277' using process `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278'.
+  created $dff cell `$procdff$557' with positive edge clock.
+Creating register for signal `\RAM16S1.\mem' using process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$259'.
+  created $dff cell `$procdff$558' with positive edge clock.
+Creating register for signal `\RAM16S1.$bitselwrite$pos$/usr/local/bin/../share/yosys/gowin/cells_sim.v:989$256' using process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$259'.
+  created $dff cell `$procdff$559' with positive edge clock.
+Creating register for signal `\RAM16S1.$lookahead\mem$258' using process `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$259'.
+  created $dff cell `$procdff$560' with positive edge clock.
+Creating register for signal `\ALU.\C' using process `\ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\ALU.\S' using process `\ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DFFNCE.\Q' using process `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$250'.
+  created $adff cell `$procdff$561' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNC.\Q' using process `\DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$248'.
+  created $adff cell `$procdff$562' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNPE.\Q' using process `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$246'.
+  created $adff cell `$procdff$563' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNP.\Q' using process `\DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$244'.
+  created $adff cell `$procdff$564' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNRE.\Q' using process `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$242'.
+  created $dff cell `$procdff$565' with negative edge clock.
+Creating register for signal `\DFFNR.\Q' using process `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$240'.
+  created $dff cell `$procdff$566' with negative edge clock.
+Creating register for signal `\DFFNSE.\Q' using process `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$238'.
+  created $dff cell `$procdff$567' with negative edge clock.
+Creating register for signal `\DFFNS.\Q' using process `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$236'.
+  created $dff cell `$procdff$568' with negative edge clock.
+Creating register for signal `\DFFNE.\Q' using process `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:381$234'.
+  created $dff cell `$procdff$569' with negative edge clock.
+Creating register for signal `\DFFN.\Q' using process `\DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:366$232'.
+  created $dff cell `$procdff$570' with negative edge clock.
+Creating register for signal `\DFFCE.\Q' using process `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$230'.
+  created $adff cell `$procdff$571' with positive edge clock and positive level reset.
+Creating register for signal `\DFFC.\Q' using process `\DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$228'.
+  created $adff cell `$procdff$572' with positive edge clock and positive level reset.
+Creating register for signal `\DFFPE.\Q' using process `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$226'.
+  created $adff cell `$procdff$573' with positive edge clock and positive level reset.
+Creating register for signal `\DFFP.\Q' using process `\DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$224'.
+  created $adff cell `$procdff$574' with positive edge clock and positive level reset.
+Creating register for signal `\DFFRE.\Q' using process `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$222'.
+  created $dff cell `$procdff$575' with positive edge clock.
+Creating register for signal `\DFFR.\Q' using process `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$220'.
+  created $dff cell `$procdff$576' with positive edge clock.
+Creating register for signal `\DFFSE.\Q' using process `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$218'.
+  created $dff cell `$procdff$577' with positive edge clock.
+Creating register for signal `\DFFS.\Q' using process `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$216'.
+  created $dff cell `$procdff$578' with positive edge clock.
+Creating register for signal `\DFFE.\Q' using process `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:194$214'.
+  created $dff cell `$procdff$579' with positive edge clock.
+Creating register for signal `\DFF.\Q' using process `\DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:179$212'.
+  created $dff cell `$procdff$580' with positive edge clock.
+Creating register for signal `\signed_mult8.\A' using process `\signed_mult8.$proc$../../../source/signed_mult8.v:16$25'.
+  created $dff cell `$procdff$581' with positive edge clock.
+Creating register for signal `\signed_mult8.\B' using process `\signed_mult8.$proc$../../../source/signed_mult8.v:16$25'.
+  created $dff cell `$procdff$582' with positive edge clock.
+Creating register for signal `\signed_mult8.\RES' using process `\signed_mult8.$proc$../../../source/signed_mult8.v:16$25'.
+  created $dff cell `$procdff$583' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.\Dout_emu' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$584' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.\ABSel' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$585' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.\ABin' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$586' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.\vectOut[0]' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$587' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.\vectOut[1]' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$588' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.$mem2reg_rd$\vectOut$../../signed_mult8_wrapper.v:59$1_ADDR' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$589' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.$mem2reg_rd$\vectOut$../../signed_mult8_wrapper.v:59$1_DATA' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$590' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.$mem2bits$\stimIn$../../signed_mult8_wrapper.v:49$2' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$591' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_ADDR' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$592' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_DATA' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$593' with positive edge clock.
+Creating register for signal `\signed_mult8_wrapper.$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN' using process `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+  created $dff cell `$procdff$594' with positive edge clock.
+
+5.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$359'.
+Found and cleaned up 1 empty switch in `\RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+Removing empty process `RAM16S4.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1070$314'.
+Removing empty process `RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$301'.
+Found and cleaned up 1 empty switch in `\RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278'.
+Removing empty process `RAM16S2.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:1025$278'.
+Removing empty process `RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$271'.
+Found and cleaned up 1 empty switch in `\RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$259'.
+Removing empty process `RAM16S1.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:987$259'.
+Removing empty process `ALU.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$254'.
+Removing empty process `DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$251'.
+Found and cleaned up 1 empty switch in `\DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$250'.
+Removing empty process `DFFNCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:535$250'.
+Removing empty process `DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$249'.
+Removing empty process `DFFNC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:515$248'.
+Removing empty process `DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$247'.
+Found and cleaned up 1 empty switch in `\DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$246'.
+Removing empty process `DFFNPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:496$246'.
+Removing empty process `DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$245'.
+Removing empty process `DFFNP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:476$244'.
+Removing empty process `DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$243'.
+Found and cleaned up 2 empty switches in `\DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$242'.
+Removing empty process `DFFNRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:457$242'.
+Removing empty process `DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$241'.
+Found and cleaned up 1 empty switch in `\DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$240'.
+Removing empty process `DFFNR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:437$240'.
+Removing empty process `DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$239'.
+Found and cleaned up 2 empty switches in `\DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$238'.
+Removing empty process `DFFNSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:418$238'.
+Removing empty process `DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$237'.
+Found and cleaned up 1 empty switch in `\DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$236'.
+Removing empty process `DFFNS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:398$236'.
+Removing empty process `DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$235'.
+Found and cleaned up 1 empty switch in `\DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:381$234'.
+Removing empty process `DFFNE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:381$234'.
+Removing empty process `DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$233'.
+Removing empty process `DFFN.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:366$232'.
+Removing empty process `DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$231'.
+Found and cleaned up 1 empty switch in `\DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$230'.
+Removing empty process `DFFCE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:348$230'.
+Removing empty process `DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$229'.
+Removing empty process `DFFC.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:328$228'.
+Removing empty process `DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$227'.
+Found and cleaned up 1 empty switch in `\DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$226'.
+Removing empty process `DFFPE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:309$226'.
+Removing empty process `DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$225'.
+Removing empty process `DFFP.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:289$224'.
+Removing empty process `DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$223'.
+Found and cleaned up 2 empty switches in `\DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$222'.
+Removing empty process `DFFRE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:270$222'.
+Removing empty process `DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$221'.
+Found and cleaned up 1 empty switch in `\DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$220'.
+Removing empty process `DFFR.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:250$220'.
+Removing empty process `DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$219'.
+Found and cleaned up 2 empty switches in `\DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$218'.
+Removing empty process `DFFSE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:231$218'.
+Removing empty process `DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$217'.
+Found and cleaned up 1 empty switch in `\DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$216'.
+Removing empty process `DFFS.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:211$216'.
+Removing empty process `DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$215'.
+Found and cleaned up 1 empty switch in `\DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:194$214'.
+Removing empty process `DFFE.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:194$214'.
+Removing empty process `DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:0$213'.
+Removing empty process `DFF.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:179$212'.
+Found and cleaned up 1 empty switch in `\signed_mult8.$proc$../../../source/signed_mult8.v:16$25'.
+Removing empty process `signed_mult8.$proc$../../../source/signed_mult8.v:16$25'.
+Found and cleaned up 3 empty switches in `\signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+Removing empty process `signed_mult8_wrapper.$proc$../../signed_mult8_wrapper.v:44$4'.
+Cleaned up 25 empty switches.
+
+5.4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$54113f86de8fd50f9af95c150d05a92c3f7bb662\signed_multiplier.
+Optimizing module signed_mult8.
+<suppressed ~3 debug messages>
+Optimizing module signed_mult8_wrapper.
+<suppressed ~1 debug messages>
+
+5.5. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$54113f86de8fd50f9af95c150d05a92c3f7bb662\signed_multiplier.
+Deleting now unused module signed_mult8.
+<suppressed ~2 debug messages>
+
+5.6. Executing TRIBUF pass.
+
+5.7. Executing DEMINOUT pass (demote inout ports to input or output).
+
+5.8. Executing SYNTH pass.
+
+5.8.1. Executing PROC pass (convert processes to netlists).
+
+5.8.1.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.8.1.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.8.1.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+5.8.1.4. Executing PROC_INIT pass (extract init attributes).
+
+5.8.1.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.8.1.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+5.8.1.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+5.8.1.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.8.1.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.8.1.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.8.1.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.8.1.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 14 unused cells and 70 unused wires.
+<suppressed ~15 debug messages>
+
+5.8.4. Executing CHECK pass (checking for obvious problems).
+Checking module signed_mult8_wrapper...
+Found and reported 0 problems.
+
+5.8.5. Executing OPT pass (performing simple optimizations).
+
+5.8.5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.8.5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$463.
+    dead port 1/2 on $mux $procmux$466.
+    dead port 1/2 on $mux $procmux$472.
+    dead port 1/2 on $mux $procmux$478.
+    dead port 1/2 on $mux $procmux$484.
+Removed 5 multiplexer ports.
+<suppressed ~10 debug messages>
+
+5.8.5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+    Consolidated identical input bits for $mux cell $procmux$469:
+      Old ports: A=8'11111111, B=8'00000000, Y=$procmux$469_Y
+      New ports: A=1'1, B=1'0, Y=$procmux$469_Y [0]
+      New connections: $procmux$469_Y [7:1] = { $procmux$469_Y [0] $procmux$469_Y [0] $procmux$469_Y [0] $procmux$469_Y [0] $procmux$469_Y [0] $procmux$469_Y [0] $procmux$469_Y [0] }
+  Optimizing cells in module \signed_mult8_wrapper.
+    Consolidated identical input bits for $mux cell $procmux$502:
+      Old ports: A=$2$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$23, B=8'00000000, Y=$0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10
+      New ports: A=$procmux$469_Y [0], B=1'0, Y=$0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10 [0]
+      New connections: $0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10 [7:1] = { $0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10 [0] $0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10 [0] $0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10 [0] $0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10 [0] $0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10 [0] $0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10 [0] $0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_EN[7:0]$10 [0] }
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 2 changes.
+
+5.8.5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.8.5.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+5.8.5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.5.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.5.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+5.8.5.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.8.5.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.8.5.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.5.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+
+5.8.5.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.5.16. Finished OPT passes. (There is nothing left to do.)
+
+5.8.6. Executing FSM pass (extract and optimize FSM).
+
+5.8.6.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+5.8.6.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+5.8.6.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.8.6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+
+5.8.6.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.8.6.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+5.8.6.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+5.8.6.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+5.8.7. Executing OPT pass (performing simple optimizations).
+
+5.8.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.8.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+5.8.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.8.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.8.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$588 ($dff) from module signed_mult8_wrapper (D = \u_signed_mult8.RES [15:8], Q = \vectOut[1]).
+Adding EN signal on $procdff$587 ($dff) from module signed_mult8_wrapper (D = \u_signed_mult8.RES [7:0], Q = \vectOut[0]).
+Adding EN signal on $procdff$586 ($dff) from module signed_mult8_wrapper (D = $memrd$\stimIn$../../signed_mult8_wrapper.v:48$17_DATA, Q = \ABin).
+Adding EN signal on $procdff$585 ($dff) from module signed_mult8_wrapper (D = $memrd$\stimIn$../../signed_mult8_wrapper.v:49$18_DATA [0], Q = \ABSel).
+Adding EN signal on $procdff$584 ($dff) from module signed_mult8_wrapper (D = $3$mem2reg_rd$\vectOut$../../signed_mult8_wrapper.v:59$1_DATA[7:0]$24, Q = \Dout_emu).
+Adding EN signal on $flatten\u_signed_mult8.$procdff$582 ($dff) from module signed_mult8_wrapper (D = \ABin, Q = \u_signed_mult8.B).
+Adding EN signal on $flatten\u_signed_mult8.$procdff$581 ($dff) from module signed_mult8_wrapper (D = \ABin, Q = \u_signed_mult8.A).
+
+5.8.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 10 unused cells and 10 unused wires.
+<suppressed ~11 debug messages>
+
+5.8.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+5.8.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.8.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+5.8.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+5.8.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.7.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.7.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+5.8.7.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.8.7.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.8.7.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.7.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+
+5.8.7.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.7.23. Finished OPT passes. (There is nothing left to do.)
+
+5.8.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 address bits (of 3) from memory init port signed_mult8_wrapper.$auto$proc_memwr.cc:45:proc_memwr$595 (stimIn).
+Removed top 31 address bits (of 32) from memory read port signed_mult8_wrapper.$memrd$\stimIn$../../signed_mult8_wrapper.v:48$17 (stimIn).
+Removed top 31 address bits (of 32) from memory read port signed_mult8_wrapper.$memrd$\stimIn$../../signed_mult8_wrapper.v:49$18 (stimIn).
+Removed top 2 bits (of 3) from mux cell signed_mult8_wrapper.$procmux$508 ($mux).
+Removed top 2 bits (of 3) from mux cell signed_mult8_wrapper.$procmux$481 ($mux).
+Removed top 2 bits (of 3) from wire signed_mult8_wrapper.$0$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_ADDR[2:0]$8.
+Removed top 2 bits (of 3) from wire signed_mult8_wrapper.$2$memwr$\stimIn$../../signed_mult8_wrapper.v:58$3_ADDR[2:0]$21.
+
+5.8.9. Executing PEEPOPT pass (run peephole optimizers).
+
+5.8.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+5.8.11. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module signed_mult8_wrapper:
+  creating $macc model for $flatten\u_signed_mult8.\u_signed_multiplier.$mul$../../../source/signed_multiplier.v:12$28 ($mul).
+  creating $macc cell for $flatten\u_signed_mult8.\u_signed_multiplier.$mul$../../../source/signed_multiplier.v:12$28: $auto$alumacc.cc:365:replace_macc$621
+  created 0 $alu and 1 $macc cells.
+
+5.8.12. Executing SHARE pass (SAT-based resource sharing).
+
+5.8.13. Executing OPT pass (performing simple optimizations).
+
+5.8.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.8.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+5.8.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.8.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.8.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+
+5.8.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.8.13.9. Finished OPT passes. (There is nothing left to do.)
+
+5.8.14. Executing MEMORY pass.
+
+5.8.14.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.8.14.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+5.8.14.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing signed_mult8_wrapper.stimIn write port 0.
+
+5.8.14.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+5.8.14.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\stimIn'[0] in module `\signed_mult8_wrapper': merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\stimIn'[1] in module `\signed_mult8_wrapper': merging output FF to cell.
+    Write port 0: don't care on collision.
+
+5.8.14.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 2 unused cells and 10 unused wires.
+<suppressed ~3 debug messages>
+
+5.8.14.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory signed_mult8_wrapper.stimIn by address:
+  Merging ports 0, 1 (address 1'1).
+
+5.8.14.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+5.8.14.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+5.8.14.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.8.15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+
+5.9. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+using FF mapping for memory signed_mult8_wrapper.stimIn
+<suppressed ~636 debug messages>
+
+5.10. Executing TECHMAP pass (map to technology primitives).
+
+5.10.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/lutrams_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/lutrams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__GOWIN_LUTRAM_'.
+Successfully finished Verilog frontend.
+
+5.10.2. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/brams_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__GOWIN_SP_'.
+Generating RTLIL representation for module `\$__GOWIN_DP_'.
+Generating RTLIL representation for module `\$__GOWIN_SDP_'.
+Successfully finished Verilog frontend.
+
+5.10.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+5.11. Executing OPT pass (performing simple optimizations).
+
+5.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+<suppressed ~5 debug messages>
+
+5.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 1 unused cells and 5 unused wires.
+<suppressed ~2 debug messages>
+
+5.11.5. Finished fast OPT passes.
+
+5.12. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \stimIn in module \signed_mult8_wrapper:
+  created 2 $dff cells and 0 static cells of width 8.
+Extracted data FF from read port 0 of signed_mult8_wrapper.stimIn: $\stimIn$rdreg[0]
+  read interface: 1 $dff and 0 $mux cells.
+  write interface: 2 write mux blocks.
+
+5.13. Executing OPT pass (performing simple optimizations).
+
+5.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+<suppressed ~4 debug messages>
+
+5.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+5.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+5.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+5.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+5.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\stimIn[1]$837 ($dff) from module signed_mult8_wrapper (D = \Din_emu, Q = \stimIn[1]).
+Adding EN signal on $memory\stimIn[0]$835 ($dff) from module signed_mult8_wrapper (D = \Din_emu, Q = \stimIn[0]).
+
+5.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+5.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.13.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.13.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+5.13.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.13.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.13.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.13.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+
+5.13.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.13.23. Finished OPT passes. (There is nothing left to do.)
+
+5.14. Executing TECHMAP pass (map to technology primitives).
+
+5.14.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+5.14.2. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/arith_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_gw1n_alu'.
+Successfully finished Verilog frontend.
+
+5.14.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $and.
+Using extmapper maccmap for cells of type $macc.
+  add \u_signed_mult8.A * \u_signed_mult8.B (8x8 bits, signed)
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010000 for cells of type $fa.
+Using template $paramod$6df0329addda9228fcc2546de2aaf14ad26c98e1\_80_gw1n_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+No more expansions possible.
+<suppressed ~197 debug messages>
+
+5.15. Executing OPT pass (performing simple optimizations).
+
+5.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+<suppressed ~254 debug messages>
+
+5.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+<suppressed ~342 debug messages>
+Removed a total of 114 cells.
+
+5.15.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 39 unused cells and 105 unused wires.
+<suppressed ~40 debug messages>
+
+5.15.5. Finished fast OPT passes.
+
+5.16. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Mapping port signed_mult8_wrapper.Addr_emu using IBUF.
+Mapping port signed_mult8_wrapper.Din_emu using IBUF.
+Mapping port signed_mult8_wrapper.Dout_emu using OBUF.
+Mapping port signed_mult8_wrapper.clk_dut using IBUF.
+Mapping port signed_mult8_wrapper.clk_emu using IBUF.
+Mapping port signed_mult8_wrapper.get_emu using IBUF.
+Mapping port signed_mult8_wrapper.load_emu using IBUF.
+
+5.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+5.18. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+5.19. Executing TECHMAP pass (map to technology primitives).
+
+5.19.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/cells_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+5.19.2. Continuing TECHMAP pass.
+Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
+Using template \$_DFF_P_ for cells of type $_DFF_P_.
+No more expansions possible.
+<suppressed ~97 debug messages>
+
+5.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+<suppressed ~9 debug messages>
+
+5.21. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+5.22. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/abc9_model.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+5.23. Executing ABC9 pass.
+
+5.23.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.3. Executing PROC pass (convert processes to netlists).
+
+5.23.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$1970'.
+Cleaned up 1 empty switch.
+
+5.23.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.23.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 4 assignments to connections.
+
+5.23.3.4. Executing PROC_INIT pass (extract init attributes).
+
+5.23.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.23.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+5.23.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$1970'.
+
+5.23.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.23.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010.\C' using process `$paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$1970'.
+  created direct connection (no actual register cell created).
+Creating register for signal `$paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010.\S' using process `$paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$1970'.
+  created direct connection (no actual register cell created).
+
+5.23.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.23.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010.$proc$/usr/local/bin/../share/yosys/gowin/cells_sim.v:913$1970'.
+Cleaned up 0 empty switches.
+
+5.23.3.12. Executing OPT_EXPR pass (perform const folding).
+
+5.23.4. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module signed_mult8_wrapper.
+Found 0 SCCs.
+
+5.23.5. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.6. Executing PROC pass (convert processes to netlists).
+
+5.23.6.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.23.6.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.23.6.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+5.23.6.4. Executing PROC_INIT pass (extract init attributes).
+
+5.23.6.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.23.6.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+5.23.6.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+5.23.6.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.23.6.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.23.6.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.23.6.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.23.6.12. Executing OPT_EXPR pass (perform const folding).
+
+5.23.7. Executing TECHMAP pass (map to technology primitives).
+
+5.23.7.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+5.23.7.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~249 debug messages>
+
+5.23.8. Executing OPT pass (performing simple optimizations).
+
+5.23.8.1. Executing OPT_EXPR pass (perform const folding).
+
+5.23.8.2. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+5.23.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Removed 0 multiplexer ports.
+
+5.23.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Performed a total of 0 changes.
+
+5.23.8.5. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+5.23.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.23.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+
+5.23.8.8. Executing OPT_EXPR pass (perform const folding).
+
+5.23.8.9. Finished OPT passes. (There is nothing left to do.)
+
+5.23.9. Executing TECHMAP pass (map to technology primitives).
+
+5.23.9.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/abc9_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/abc9_map.v' to AST representation.
+Successfully finished Verilog frontend.
+
+5.23.9.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~2 debug messages>
+
+5.23.10. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/abc9_model.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/abc9_model.v' to AST representation.
+Replacing existing blackbox module `$__ABC9_DELAY' at /usr/local/bin/../share/yosys/abc9_model.v:2.1-7.10.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Replacing existing blackbox module `$__ABC9_SCC_BREAKER' at /usr/local/bin/../share/yosys/abc9_model.v:9.1-11.10.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Replacing existing module `$__DFF_N__$abc9_flop' at /usr/local/bin/../share/yosys/abc9_model.v:14.1-20.10.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Replacing existing module `$__DFF_P__$abc9_flop' at /usr/local/bin/../share/yosys/abc9_model.v:23.1-29.10.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+5.23.11. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~134 debug messages>
+
+5.23.12. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.13. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+5.23.14. Executing TECHMAP pass (map to technology primitives).
+
+5.23.14.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+5.23.14.2. Continuing TECHMAP pass.
+Using template $paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010 for cells of type $paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $not.
+No more expansions possible.
+<suppressed ~258 debug messages>
+
+5.23.15. Executing OPT pass (performing simple optimizations).
+
+5.23.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.23.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.23.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.23.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.23.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.23.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.23.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+5.23.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.23.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.23.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \signed_mult8_wrapper..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.23.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \signed_mult8_wrapper.
+Performed a total of 0 changes.
+
+5.23.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\signed_mult8_wrapper'.
+Removed a total of 0 cells.
+
+5.23.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.23.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \signed_mult8_wrapper..
+
+5.23.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module signed_mult8_wrapper.
+
+5.23.15.16. Finished OPT passes. (There is nothing left to do.)
+
+5.23.16. Executing AIGMAP pass (map logic to AIG).
+Module signed_mult8_wrapper: replaced 5 cells with 35 new cells, skipped 9 cells.
+  replaced 2 cell types:
+       3 $_XOR_
+       2 $_MUX_
+  not replaced 2 cell types:
+       8 $specify2
+       1 $_NOT_
+
+5.23.17. Executing AIGMAP pass (map logic to AIG).
+Module signed_mult8_wrapper: replaced 181 cells with 1111 new cells, skipped 450 cells.
+  replaced 3 cell types:
+      52 $_OR_
+     120 $_XOR_
+       9 $_MUX_
+  not replaced 10 cell types:
+       2 $scopeinfo
+      19 $_NOT_
+     184 $_AND_
+      16 DFF
+      58 DFFE
+      15 IBUF
+       8 OBUF
+      74 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000001001000000
+      58 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000000111111
+      16 $paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010
+
+5.23.17.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.17.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+5.23.17.3. Executing XAIGER backend.
+<suppressed ~85 debug messages>
+Extracted 623 AND gates and 1639 wires from module `signed_mult8_wrapper' to a netlist network with 110 inputs and 150 outputs.
+
+5.23.17.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+5.23.17.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =    110/    150  and =     504  lev =   17 (1.31)  mem = 0.02 MB  box = 148  bb = 132
+ABC: + &scorr 
+ABC: Warning: The network is combinational.
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =    110/    150  and =     547  lev =   17 (1.40)  mem = 0.02 MB  ch =   28  box = 148  bb = 132
+ABC: + &if -W 500 -v 
+ABC: K = 8. Memory (bytes): Truth =    0. Cut =   68. Obj =  152. Set =  708. CutMin = no
+ABC: Node =     547.  Ch =    28.  Total mem =    0.19 MB. Peak cut mem =    0.02 MB.
+ABC: P:  Del = 10008.00.  Ar =     964.0.  Edge =      711.  Cut =    10440.  T =     0.00 sec
+ABC: P:  Del = 10008.00.  Ar =     960.0.  Edge =      711.  Cut =    10435.  T =     0.00 sec
+ABC: P:  Del = 10008.00.  Ar =     803.0.  Edge =      772.  Cut =    20927.  T =     0.00 sec
+ABC: F:  Del = 10008.00.  Ar =     424.0.  Edge =      730.  Cut =    15194.  T =     0.00 sec
+ABC: A:  Del = 10008.00.  Ar =     395.0.  Edge =      678.  Cut =    12249.  T =     0.00 sec
+ABC: A:  Del = 10008.00.  Ar =     382.0.  Edge =      669.  Cut =    12324.  T =     0.00 sec
+ABC: Total time =     0.01 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =    110/    150  and =    1573  lev =   22 (1.47)  mem = 0.03 MB  box = 148  bb = 132
+ABC: Mapping (K=8)  :  lut =    159  edge =     621  lev =    5 (0.49)  Boxes are not in a topological order. Switching to level computation without boxes.
+ABC: levB =   22  mem = 0.01 MB
+ABC: LUT = 159 : 2=36 22.6 %  3=31 19.5 %  4=39 24.5 %  5=35 22.0 %  6=7 4.4 %  7=5 3.1 %  8=6 3.8 %  Ave = 3.91
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + time 
+ABC: elapse: 0.27 seconds, total: 0.27 seconds
+
+5.23.17.6. Executing AIGER frontend.
+<suppressed ~532 debug messages>
+Removed 2738 unused cells and 3375 unused wires.
+
+5.23.17.7. Executing ABC9_OPS pass (helper functions for ABC9).
+ABC RESULTS:              $lut cells:      160
+ABC RESULTS:   $paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010 cells:       16
+ABC RESULTS:           input signals:       19
+ABC RESULTS:          output signals:      136
+Removing temp directory.
+
+5.23.18. Executing TECHMAP pass (map to technology primitives).
+
+5.23.18.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/abc9_unmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `\$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `\$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+5.23.18.2. Continuing TECHMAP pass.
+Using template $paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010 for cells of type $paramod\ALU\ALU_MODE=s32'00000000000000000000000000000010.
+No more expansions possible.
+<suppressed ~22 debug messages>
+Removed 15 unused cells and 2008 unused wires.
+
+5.24. Executing TECHMAP pass (map to technology primitives).
+
+5.24.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/gowin/cells_map.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/gowin/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+5.24.2. Continuing TECHMAP pass.
+Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$28d058de54679f828015740822c0b89650557efe\$lut for cells of type $lut.
+Using template $paramod$08a5251094e6791f0c6a19a79c33ed46d064f1e7\$lut for cells of type $lut.
+Using template $paramod$2f6fbf07b3e4a76d1d34e16222fc926649308a32\$lut for cells of type $lut.
+Using template $paramod$cec037a4e5f2226d25c826ae94c7d863dfcdc24a\$lut for cells of type $lut.
+Using template $paramod$7f00f3cf96c6ed6e21a4bde83a7df8ce0017c3bb\$lut for cells of type $lut.
+Using template $paramod$a129c2eead4a7523600669e1e85a097f73df360c\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0010 for cells of type $lut.
+Using template $paramod$5b737cfb6b9d3eeaade0be960b013e33de63164c\$lut for cells of type $lut.
+Using template $paramod$9e4109810a4a695b0583f1780ae8668572efdf74\$lut for cells of type $lut.
+Using template $paramod$7c5f64b6cf68ca4389c34dfdee0b7ef33fda6b46\$lut for cells of type $lut.
+Using template $paramod$c316b404e381937a68ca5285abea8affc8ebb009\$lut for cells of type $lut.
+Using template $paramod$e45a72815ba94ed1ae33ec25c0390cb048fcb3fd\$lut for cells of type $lut.
+Using template $paramod$6aeca3ee1c1e806ed7d97c3e93ac0e53282ebde8\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01101001 for cells of type $lut.
+Using template $paramod$e192e665d6127f31f9c5ac986474aa79ff8e6a02\$lut for cells of type $lut.
+Using template $paramod$736eca73eba87c7557d3d691bca0d585c12e599b\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01111000 for cells of type $lut.
+Using template $paramod$19e5b38cca183d8b6b3a15d20dc995c09cd71893\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+Using template $paramod$1b53a9695a0f80de7517b50863b438fd2b7f56da\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10010000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00101000 for cells of type $lut.
+Using template $paramod$c227f721a44fefdada39f6c9acbbd79680d6e12a\$lut for cells of type $lut.
+Using template $paramod$ca8f22bcd60a7f9ff326fb6688026c34f5df0032\$lut for cells of type $lut.
+Using template $paramod$d6ca727e39f31d51d29072e0f33aa09c65e37336\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01110001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00110001 for cells of type $lut.
+Using template $paramod$c0044b8ea58b95019a844418cecdf80f9bc26c01\$lut for cells of type $lut.
+Using template $paramod$25445fb9dd8fc77490980c6bd2e9dbc53c6e84a5\$lut for cells of type $lut.
+Using template $paramod$f83f04d13c2ac05f96f173d65b5f2dc368452ac8\$lut for cells of type $lut.
+Using template $paramod$039b831f2b8b835a841936b88a65b49ae86414fe\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01001101 for cells of type $lut.
+Using template $paramod$0de052767abdccc3aefc818722bdc3c7850d25d6\$lut for cells of type $lut.
+Using template $paramod$719aa98c37443d90102d78891b8298810f528a6e\$lut for cells of type $lut.
+Using template $paramod$dcfc23e7d6bcd26b82233688fdfbe92480ddfdcf\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10010110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1001 for cells of type $lut.
+Using template $paramod$23c94ade0ece9745d080cc58c6c3dddeb53c9936\$lut for cells of type $lut.
+Using template $paramod$e9f71582696849081fb79e4580214a5c109ded04\$lut for cells of type $lut.
+Using template $paramod$42de4a21cb3df0ccdb8090cc0293813cb1d37d3a\$lut for cells of type $lut.
+Using template $paramod$a92fb5a1c328a2e1709e31eea80bc47762cde451\$lut for cells of type $lut.
+Using template $paramod$a1e29650cd288b76d79f6eb805e80eb8e8d02526\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000111 for cells of type $lut.
+Using template $paramod$2e8700cfcb3c5d30b8b6416ff967c515d922ade4\$lut for cells of type $lut.
+Using template $paramod$406ee6dee2c3b14fcc8513354f3f01b38599c7d0\$lut for cells of type $lut.
+Using template $paramod$65c5a1082c0f1fdaf78c199dee1ac4903586377d\$lut for cells of type $lut.
+Using template $paramod$4b1c711749cb34b860355e506fe80bfa63c5158c\$lut for cells of type $lut.
+Using template $paramod$ba15ed067bcfef615854db1cd9967600aea7d76a\$lut for cells of type $lut.
+Using template $paramod$239a649c3c5dcff42e28a38401931acf401ef810\$lut for cells of type $lut.
+Using template $paramod$bf0d22492b141397adcabc2e359ee0f860225fa5\$lut for cells of type $lut.
+Using template $paramod$5629fcf554a33f6655ea88a19ac78931d2a16b74\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01011110 for cells of type $lut.
+Using template $paramod$069bb99fc8f293eec7931733dfd3002c879eb85e\$lut for cells of type $lut.
+Using template $paramod$30305e55a780880b9c824fe3509a4d981acb0f2b\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11100010 for cells of type $lut.
+Using template $paramod$c6705c2d9a5ca1e5236b47844e83005fc173deff\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11010100 for cells of type $lut.
+Using template $paramod$0ad36cb7477156f0fb195a4213b3d915a1144e89\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod$b532a6f2c46d2468ace5ed81e68500a2dad469e5\$lut for cells of type $lut.
+Using template $paramod$23124ce8b7d08b2e35cfb0fc17d013c0fd375ec4\$lut for cells of type $lut.
+Using template $paramod$e885aaada7c2ca9c9e17e3b532f54b7d89d75301\$lut for cells of type $lut.
+Using template $paramod$21a9cf1c7cffed4ea7970972274e8bcced7c7005\$lut for cells of type $lut.
+Using template $paramod$4e796a6fbf3d55b6556dc40ef4308887d326ee47\$lut for cells of type $lut.
+Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879\$lut for cells of type $lut.
+Using template $paramod$ad5fa4c993dc43c3e00419e69284cb50b42316d6\$lut for cells of type $lut.
+Using template $paramod$f5c97e291c8b48d9f1b4239d871ab7639e5a24ac\$lut for cells of type $lut.
+Using template $paramod$cbd76585c95632e94e3a7cc004c814382b45eac0\$lut for cells of type $lut.
+Using template $paramod$98409dc7c318cfbd4b3720e29108797e07b3c00a\$lut for cells of type $lut.
+Using template $paramod$1749831297ef20bd5383c715e49cf334c540a127\$lut for cells of type $lut.
+Using template $paramod$5aade32a42eeea80d52be580c6f168f2efa73bd2\$lut for cells of type $lut.
+Using template $paramod$6f625205336ac6ce7b8747324becdbce1049bc9c\$lut for cells of type $lut.
+Using template $paramod$c01d1f1a2c22a23f58c65a92a9c94eaeebcde834\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00101101 for cells of type $lut.
+Using template $paramod$011bd441adee1f2fe24f797d05ce0735ebeb0149\$lut for cells of type $lut.
+Using template $paramod$09fc4e91afc4e73d81a387bb9663674c39ced577\$lut for cells of type $lut.
+Using template $paramod$fef55ce25c5c6cd66c3d7e025982e087a366559b\$lut for cells of type $lut.
+Using template $paramod$3c2ccb32b0282254e683e81cf262a0e897e8e54a\$lut for cells of type $lut.
+Using template $paramod$9bea0ec32401ace8e27401cdd60ce7883b00dfd6\$lut for cells of type $lut.
+Using template $paramod$0b6ffb5709cb3858f8c05fbd7823071a3277a4c5\$lut for cells of type $lut.
+Using template $paramod$21a1ca6f9f5c15b304c8c46ce6cda8b91e063cf1\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11100100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11011000 for cells of type $lut.
+Using template $paramod$79fa5dc7b758560fe794c69b8a91c5bbe4b5db3e\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod$19ab757ce03622a04b8ab7f83e8d09d5edc1d161\$lut for cells of type $lut.
+Using template $paramod$6a5a4d22ddb060f73ae96e7201d959ca4da8532e\$lut for cells of type $lut.
+Using template $paramod$941e42d23e43e87d4bd9b0315166a8585c065ed7\$lut for cells of type $lut.
+Using template $paramod$8c269bb5afecdf2bf0d4ca7a7353abbd40bcde64\$lut for cells of type $lut.
+Using template $paramod$8d60e8ebe66fc101a9d950e1573e23d3bdaaa0da\$lut for cells of type $lut.
+Using template $paramod$abae97adb742e9c7a5e9d4d55e2100fd33479378\$lut for cells of type $lut.
+Using template $paramod$79c64443c90d23576cb7e0efeb450ddea4c52c9c\$lut for cells of type $lut.
+Using template $paramod$22b0f517b2345992a5a6fe4494254a6aa6083fd1\$lut for cells of type $lut.
+Using template $paramod$483065374cbfe84588bf4d6b5d9c0a13127d6454\$lut for cells of type $lut.
+Using template $paramod$1bf0b6360704ee3a496011ee9109841fa9783cfd\$lut for cells of type $lut.
+Using template $paramod$dc8f5707fa650c71a63deeca976b8c98e36484b7\$lut for cells of type $lut.
+Using template $paramod$54473d8a8ee30b54a4d9a79dbc864ddf78a91cd1\$lut for cells of type $lut.
+Using template $paramod$fc7cc4d4488a362357bc90dccca5d3626d5c2a71\$lut for cells of type $lut.
+Using template $paramod$f7cf4c6a8b32d0f3984abbb9933754b3661fd239\$lut for cells of type $lut.
+Using template $paramod$96bb0bddc3500c00c5f86427d3a028138f3036c7\$lut for cells of type $lut.
+Using template $paramod$a45777cfe04d11a84dc360be79df72e7769a0b26\$lut for cells of type $lut.
+Using template $paramod$e8c1c5a527b5dfd56746085998c37b18e6d2f76b\$lut for cells of type $lut.
+Using template $paramod$4de9269c2a6e89196a68545b9b58b3971b0461ca\$lut for cells of type $lut.
+Using template $paramod$196e959213b04d7687e4ded97ea7d526c69c8d5a\$lut for cells of type $lut.
+Using template $paramod$4503307402402f0834059e82aa7109367927dd83\$lut for cells of type $lut.
+Using template $paramod$798f606011c1c1442dc7058f5433df9035b858f1\$lut for cells of type $lut.
+Using template $paramod$949d2d2c1dbe5bb6714c626f32a634f1568637cf\$lut for cells of type $lut.
+Using template $paramod$6b4f371b5fc32fa4a075fed4cc1befc2ba98896e\$lut for cells of type $lut.
+Using template $paramod$f14c7ea4b7504fcdfcf9787ff63e75d465609393\$lut for cells of type $lut.
+Using template $paramod$78d21d1c8b78e11d01088e894eb96dcc48cc945f\$lut for cells of type $lut.
+Using template $paramod$56cadfb979f08c43fab19aa1456817f44877d531\$lut for cells of type $lut.
+Using template $paramod$44166077814a23026519b525d8ec306bbcaac037\$lut for cells of type $lut.
+Using template $paramod$52b3a698831fbcff4328015eca224eec8c520537\$lut for cells of type $lut.
+Using template $paramod$eec7177bc6e3a255aa8fae1abf54a08263bfb4d7\$lut for cells of type $lut.
+Using template $paramod$35c57873920eba13532dc5e01a428ff1c2ae8a65\$lut for cells of type $lut.
+Using template $paramod$77ef5c042ba426f70c75bd5d7371c17220c5f28d\$lut for cells of type $lut.
+Using template $paramod$7e0f58cfbad033f4b9eede13427c8a21e3d07445\$lut for cells of type $lut.
+Using template $paramod$340fe12df945de7902fa29291b564fe1f9e5b552\$lut for cells of type $lut.
+Using template $paramod$ff406f30db40d68cf374c850f001104be5241506\$lut for cells of type $lut.
+Using template $paramod$9664483609d9e726df9697364de1aad825ad3979\$lut for cells of type $lut.
+Using template $paramod$4ccbf01b115b0fd888e8b522e3e1c57805af6ef2\$lut for cells of type $lut.
+Using template $paramod$5bebff2a0a7d6b66de9770211981ce3ee861358e\$lut for cells of type $lut.
+Using template $paramod$7422038245122c2d1540faa1f4757b5d50a515a6\$lut for cells of type $lut.
+Using template $paramod$9c935629bc2692768cd6c2d592b4eeb6d55585b1\$lut for cells of type $lut.
+Using template $paramod$af14011685e25cc75a2003ffcb1c7f3afc263b44\$lut for cells of type $lut.
+Using template $paramod$260a257f72ee355c8d41fefe1acbc862b54569ad\$lut for cells of type $lut.
+Using template $paramod$98626ebffca6094069327649481d3a8508587b33\$lut for cells of type $lut.
+Using template $paramod$6538a0cc1cb4735c85844288da470623605e12b8\$lut for cells of type $lut.
+Using template $paramod$e1c2836e94ec58b0ec41ea79c9b80d3827e0efa9\$lut for cells of type $lut.
+Using template $paramod$eb89795ec7554bb4199cccd3d12f7ec874c7b5f1\$lut for cells of type $lut.
+Using template $paramod$2e02adb755b8a06ce4753c0c5dda73353bc28b09\$lut for cells of type $lut.
+Using template $paramod$70ea1fdfd3ca78fe05dab4156858e62e6a653237\$lut for cells of type $lut.
+Using template $paramod$09ae5c9cc867b715dc69d6c76d982049d713d9fd\$lut for cells of type $lut.
+Using template $paramod$d1753b1145dd81674b772b6c0e41c88ea50cbbbc\$lut for cells of type $lut.
+Using template $paramod$f1dc6856ab9ada7abec24f9ec2ad03aed7b687c0\$lut for cells of type $lut.
+Using template $paramod$0445df39c1c934d513ae68760e9be7960c3536b4\$lut for cells of type $lut.
+Using template $paramod$96388882dc05d094413e95dfcf1248701c48c856\$lut for cells of type $lut.
+Using template $paramod$6efe7a5d33db600a397a43c102117cbbe53ade13\$lut for cells of type $lut.
+Using template $paramod$be1faafbfb3a349b6415e7639df267854d7cb49d\$lut for cells of type $lut.
+Using template $paramod$ec65fcca92b34f2afdb157a12a7f40d4ec89c33a\$lut for cells of type $lut.
+Using template $paramod$dfe7b5bd1008c10a12575bfd4f1ef408b354a4fb\$lut for cells of type $lut.
+Using template $paramod$a7259268aa78702feedcb476140a15b1b6437afe\$lut for cells of type $lut.
+Using template $paramod$8605edd5aa7d8c1f48c2a1dcd079820aa6119e1d\$lut for cells of type $lut.
+Using template $paramod$aad72af640fd3808b96db51bb8b23c293ec78e62\$lut for cells of type $lut.
+Using template $paramod$bdadf1069ffc3d65d1051e43b44b40b941e74ce1\$lut for cells of type $lut.
+Using template $paramod$735a88bab5b1c161ef85629bc211904f329ae69d\$lut for cells of type $lut.
+Using template $paramod$a8cb9dc6eccb911035b7155b3fa8bdcdb987b386\$lut for cells of type $lut.
+Using template $paramod$d23a4334e24a940a1315e34233197e925fdfc8f5\$lut for cells of type $lut.
+Using template $paramod$0d0656789310399a5b56748fb580db81a017be2b\$lut for cells of type $lut.
+Using template $paramod$1eaf5ab72ad63d3004d407d284e9194dfc0cd390\$lut for cells of type $lut.
+Using template $paramod$a72403ce572c964269e4508bfff03e20a02debc1\$lut for cells of type $lut.
+Using template $paramod$5bca6459153494ca4d293f53ede302f48f7bf1c9\$lut for cells of type $lut.
+Using template $paramod$eba356c9b33db6f1545c26c13afc5494270fc41a\$lut for cells of type $lut.
+Using template $paramod$e33798a8829a4656cf6d4cb96a957bf1eefef4b3\$lut for cells of type $lut.
+Using template $paramod$9816245a2d76a326d58c9c514ac21a5aa4876a50\$lut for cells of type $lut.
+Using template $paramod$827f56514d6a4b308dd00769c3f38593c717b7c4\$lut for cells of type $lut.
+Using template $paramod$c97135e93fd8572e174661c0b023c20b85caf2a4\$lut for cells of type $lut.
+Using template $paramod$9d619465b4627309e11253d50ce76bdda4db01d5\$lut for cells of type $lut.
+Using template $paramod$169aad247de768b4f50ee7b289fd067b3ab4ef99\$lut for cells of type $lut.
+Using template $paramod$364e437cd6efa931b108e0e935c9bc6c719a4f0a\$lut for cells of type $lut.
+Using template $paramod$70b6d2d959a43a1d4a83276e2470cf916ed6bf17\$lut for cells of type $lut.
+Using template $paramod$3068fc9d9825fd6ed7a0da71e30dad90b081caaf\$lut for cells of type $lut.
+Using template $paramod$84f10233173cd7abee52c10382739959fecdebac\$lut for cells of type $lut.
+Using template $paramod$ed4efdfde6111004aab215cbedf6b7715e045f89\$lut for cells of type $lut.
+Using template $paramod$c687d1681f8178eea861b957b873c7d0be6e36a6\$lut for cells of type $lut.
+Using template $paramod$7384752248fa86ca78c751577d42cb39279a5cbf\$lut for cells of type $lut.
+Using template $paramod$f90fc34ce4726b5814bcd4ba16e3781e233e231a\$lut for cells of type $lut.
+Using template $paramod$f6f345cec4901a2cec8766d227ff5a224b6a9fa9\$lut for cells of type $lut.
+Using template $paramod$37cbc00e2d257d354c26d441e97d0c8b74c4e7c7\$lut for cells of type $lut.
+Using template $paramod$aff766d51bfd6300c845683283a4e6e3ffed8b12\$lut for cells of type $lut.
+Using template $paramod$76b849929de826a8ecea0d8bab11955827886b24\$lut for cells of type $lut.
+Using template $paramod$b4c1d615aeb67fd9b6f079f1285642d90fddd129\$lut for cells of type $lut.
+Using template $paramod$a5a2b9fc8cd23f64fddce9693bc3f1f30d2c57a1\$lut for cells of type $lut.
+Using template $paramod$51916f5fe8d6399221b9cc3bb882e16abb8a6354\$lut for cells of type $lut.
+Using template $paramod$b13c0898892c597f06858462bc50520656cc1256\$lut for cells of type $lut.
+Using template $paramod$e373e286a5fd5264754b3021d28d69968c395059\$lut for cells of type $lut.
+Using template $paramod$dadff75c617cf87bb5b8cfe47ca6c69fb6925370\$lut for cells of type $lut.
+Using template $paramod$6af023d04780a6b54e8dd53dc6126bcf1a45e79b\$lut for cells of type $lut.
+Using template $paramod$83290ae3f0c4ae45e71e38985ec9ff4e6f85c60a\$lut for cells of type $lut.
+Using template $paramod$0d544a5da92e7a893da30baeafe4e127dd29d463\$lut for cells of type $lut.
+Using template $paramod$c452b235e8609730cddbc22bcc93c2ef01e1034b\$lut for cells of type $lut.
+Using template $paramod$570bbc9f5354b2302bd8836bb254307bae75381d\$lut for cells of type $lut.
+Using template $paramod$5cf8e43af272d33f9f1cd69be68f58847030e033\$lut for cells of type $lut.
+Using template $paramod$fba3f9750a36d334f7861e529e88003d2d73297e\$lut for cells of type $lut.
+Using template $paramod$9dd2961c6cd32fd2e7ddb32880d6d8913fc3a510\$lut for cells of type $lut.
+Using template $paramod$2ccbfee153e070b7b6ac4aa61c0a0f15362783c0\$lut for cells of type $lut.
+Using template $paramod$6def2ec44a9fb92772bba91c4df9d179ae54f6b8\$lut for cells of type $lut.
+Using template $paramod$ae245f201d19cdff2db8ea5ba0af32ef67d2629a\$lut for cells of type $lut.
+Using template $paramod$449221af864608b9c4b37d26d1296752a139b1f6\$lut for cells of type $lut.
+Using template $paramod$2901135f049e59ca3aeca9d45c314ce05d680b30\$lut for cells of type $lut.
+Using template $paramod$1fc7aede988744b2fc59253b0947b76c0b65a2ab\$lut for cells of type $lut.
+Using template $paramod$99d850d60fb89e1eb292476390dbdeddadc01a6d\$lut for cells of type $lut.
+Using template $paramod$0a3553b07ea6c02fadec6c841db504fd87c82548\$lut for cells of type $lut.
+Using template $paramod$d2e61e082ceab8152b3ee084bdd5c2e875497c63\$lut for cells of type $lut.
+Using template $paramod$7af736c775d6ee2ec44891812dfc2eb9338b1c02\$lut for cells of type $lut.
+Using template $paramod$fe3ee37f20a8f2a95f8119f5b9d36a171425c1b8\$lut for cells of type $lut.
+Using template $paramod$33d5ae1814448c8d6bc550bbc8b0091fa96f0396\$lut for cells of type $lut.
+Using template $paramod$471171c03493f8e03531f2b1c250d90e792ee985\$lut for cells of type $lut.
+Using template $paramod$5801f8d538c3f3b029330d85bc661349c1725ba0\$lut for cells of type $lut.
+Using template $paramod$407c6d2eeb8a2badc980942c8c147c40bf64f9f8\$lut for cells of type $lut.
+Using template $paramod$e32342cd25530e7c605d81b469946a5b2fbe7ed7\$lut for cells of type $lut.
+Using template $paramod$6bb38a3772726efd5cdcfb302a164f092040b0ae\$lut for cells of type $lut.
+Using template $paramod$19ebcc6c0e5133154760bfca643719372a7a33e7\$lut for cells of type $lut.
+Using template $paramod$749addcba2f3f2a1cb7172613981c4b1bd32ac56\$lut for cells of type $lut.
+Using template $paramod$6338bbe376289b2707243292c228ba56e23005d7\$lut for cells of type $lut.
+Using template $paramod$06d3e143aea4c52446fc30390ef8f037048bc88c\$lut for cells of type $lut.
+Using template $paramod$73b8562e566d76acc628423637b77ff1f6017325\$lut for cells of type $lut.
+Using template $paramod$974e686d22f7bed7870fcbcc1dfd35973f3de4d9\$lut for cells of type $lut.
+Using template $paramod$1953c7ece84b676b6a85ba2b453acf8e16ce8366\$lut for cells of type $lut.
+Using template $paramod$170d9cf193b1de02e33b3f6200e72be0814d63ee\$lut for cells of type $lut.
+Using template $paramod$277d40e3347bbbfba844597f1212c400b5fa89e3\$lut for cells of type $lut.
+Using template $paramod$c315fd171a22ad0b563d890e3adda172ea240769\$lut for cells of type $lut.
+Using template $paramod$34a675828719d8c88f90ef54e7f083e182dd4a7f\$lut for cells of type $lut.
+Using template $paramod$e83e119533d0193153003d36867a6acdfc03b0f4\$lut for cells of type $lut.
+Using template $paramod$21e97c92dd02fcc0a8ba741703c48a7588a89508\$lut for cells of type $lut.
+Using template $paramod$7eb319789314f1ccd608b9cfcec7a73ebe539701\$lut for cells of type $lut.
+Using template $paramod$1ce02766bf4b408d64a4883d1ad16bd69a75e15f\$lut for cells of type $lut.
+Using template $paramod$e40d40ddb44a644c28a26c858d9b05ce3c6bcfc7\$lut for cells of type $lut.
+Using template $paramod$6fc8e6973430482f5fe87853d78114e31f29be00\$lut for cells of type $lut.
+Using template $paramod$7d2489e9015ffb915db0ddbceebd7b9224db4442\$lut for cells of type $lut.
+Using template $paramod$7be1f812090984626b1b7685eccc42e93a1994f0\$lut for cells of type $lut.
+Using template $paramod$257d9a0729cbf9e36c1dbfe0b360e1af55eb17bd\$lut for cells of type $lut.
+Using template $paramod$69a9e6992868122537d3e04ea3c96118b5f4b134\$lut for cells of type $lut.
+Using template $paramod$e41bdc3e3daabd9b27ad2886ec070870227d7609\$lut for cells of type $lut.
+Using template $paramod$a87cce15b733cfe5f390d04d3e3a5b49269ce9e5\$lut for cells of type $lut.
+Using template $paramod$be7ac2e943cb580f0def17d396caddd72a1756fa\$lut for cells of type $lut.
+Using template $paramod$056a19f7db5efad38a7aed7935dd3397cab03d82\$lut for cells of type $lut.
+Using template $paramod$8c76cbe8e54ef9e822b3f41df16b6ebfc7c64380\$lut for cells of type $lut.
+Using template $paramod$779da7c9de781e54576f41cda58e6354a354395c\$lut for cells of type $lut.
+Using template $paramod$bf0d0292861bdee659ef5cbc5e58b330ac5871f9\$lut for cells of type $lut.
+Using template $paramod$fe2ccc9771c7f3621af3392ea69c0322e13310d4\$lut for cells of type $lut.
+Using template $paramod$3ad93dd90b772d456ecd31d66897cbc33d42bf0b\$lut for cells of type $lut.
+Using template $paramod$cf33b15dd26a68462f5ad75d050f2dc70cd2c683\$lut for cells of type $lut.
+Using template $paramod$773890792f7e478d051dea21d3c32160f0f2e7a5\$lut for cells of type $lut.
+Using template $paramod$1ff9ae8e256cbdb8153841e5a47fbc7ea2148f5f\$lut for cells of type $lut.
+Using template $paramod$209a7763f93e12658d45c5dcfa3a05d8cbfd9f67\$lut for cells of type $lut.
+Using template $paramod$3cb4cf64cfff1206260554ab79eea63bc5276ed1\$lut for cells of type $lut.
+Using template $paramod$711ac778c1095def207218f0d05a35930c12f6de\$lut for cells of type $lut.
+Using template $paramod$8d2e4687bd5f1166064152f9cdb8d1638a6b8b07\$lut for cells of type $lut.
+Using template $paramod$00d4f6291958aee4de5d3b03989cb222787786b8\$lut for cells of type $lut.
+Using template $paramod$ac8a5dd036b56b0d09e8c965b318fda9edb20aa3\$lut for cells of type $lut.
+Using template $paramod$bff1784c1fccb6b883892224230a011ce8e895cd\$lut for cells of type $lut.
+Using template $paramod$22f7dce883cda182d0986eb3d36c7e8fffa149b2\$lut for cells of type $lut.
+Using template $paramod$5f8ac3743778b3aa89483447200869a40c135e32\$lut for cells of type $lut.
+Using template $paramod$8ad4466e72dc8c9a22a758039998aa2eb420e9aa\$lut for cells of type $lut.
+Using template $paramod$61bc98ece8c76bffd4acdf40e5f231340cba90fc\$lut for cells of type $lut.
+Using template $paramod$4518d24fec38775f282096f22ad6cfb50f51384f\$lut for cells of type $lut.
+Using template $paramod$01f259270bf50b82cd342c2217aa220d2ccaa309\$lut for cells of type $lut.
+Using template $paramod$40614bc945b57aab95fbc31af093a3fc79ada1f6\$lut for cells of type $lut.
+Using template $paramod$a221789edfb25e441232452dc790854ef391ca57\$lut for cells of type $lut.
+Using template $paramod$c315375b38d9b335dda17fd1fc5b4ea013922c1a\$lut for cells of type $lut.
+Using template $paramod$017bd453219036901adac1cb75bf5a85449765be\$lut for cells of type $lut.
+Using template $paramod$368c677afb58040549c831901b6588a14e1d3574\$lut for cells of type $lut.
+Using template $paramod$26a2fc75b01e7d148b137748bc41c57d8029c05b\$lut for cells of type $lut.
+Using template $paramod$c832cff6ffa0d4260b66faca1681e8aec5c293b4\$lut for cells of type $lut.
+Using template $paramod$dd18947eb0b3a9edce0725bede38c523b384392c\$lut for cells of type $lut.
+Using template $paramod$1aa811448b86b6e3fcb198069b6ba1c848375f4a\$lut for cells of type $lut.
+Using template $paramod$48cf2024aaefa3118ed37247c45f4c83ce54a990\$lut for cells of type $lut.
+Using template $paramod$ae3c271c4619055838eaf5acfd46e5ee73f928fc\$lut for cells of type $lut.
+Using template $paramod$4370487f456b3e0c2adddea2dc597930a27811bf\$lut for cells of type $lut.
+Using template $paramod$5dfb1999dd78938e5830c6e5c62dda054a75b01d\$lut for cells of type $lut.
+Using template $paramod$f8ebc2ff88f8ad58b89961195f93555a7c6d38d1\$lut for cells of type $lut.
+Using template $paramod$cbe8b95bd49203bf3790b1d5c9042b220609bdc5\$lut for cells of type $lut.
+Using template $paramod$8ee26044fa3273962175a612200e6fe0e81f3837\$lut for cells of type $lut.
+Using template $paramod$121e056d882193597374fa3c7c1985b354da9634\$lut for cells of type $lut.
+Using template $paramod$6b0dc706ecc2e8a6f254707fe009d4364465fd2b\$lut for cells of type $lut.
+Using template $paramod$8d5cd53166b1c623f0157cd465aa60c893c68942\$lut for cells of type $lut.
+Using template $paramod$b5ec8bf7ad11f80cd75e1f0fcc6ca16c42c7afa9\$lut for cells of type $lut.
+Using template $paramod$2e80234eb65b58947256d53f7d1fe8f0fdcd6c6b\$lut for cells of type $lut.
+Using template $paramod$a6766e320d89b19a2c01d85f24c777926c5a5c21\$lut for cells of type $lut.
+Using template $paramod$b235a8b3ed3322814c7dc6858c3c259c484a566a\$lut for cells of type $lut.
+Using template $paramod$b36afe96b20c862a920bcfef71ef7eaf3fa61cf6\$lut for cells of type $lut.
+Using template $paramod$ec62c75855a14125bb87c581ed60c28c4340dffe\$lut for cells of type $lut.
+Using template $paramod$5a577322caf003685351d52ad92169f9ce304b44\$lut for cells of type $lut.
+Using template $paramod$a6323b720711f68f0961f4b940ff9e990783580a\$lut for cells of type $lut.
+Using template $paramod$1c2daa38f2d95bd4e305b91d25baba06ceccb7c4\$lut for cells of type $lut.
+Using template $paramod$05dbc31f5874413ce901524108ec7e9893b3c35a\$lut for cells of type $lut.
+Using template $paramod$b3fc3ae948318fc5a8333a79ad23293a464e1b9c\$lut for cells of type $lut.
+Using template $paramod$c004e11f4ff8d53c6ac8da9d997377686df33019\$lut for cells of type $lut.
+Using template $paramod$b904fbf4bfb99c98a713c01d7c88b1079eeb390f\$lut for cells of type $lut.
+Using template $paramod$32f70bc52c0e4488fe9ad8b0fa933a64f352467d\$lut for cells of type $lut.
+Using template $paramod$d640f7cf90ea7e706ea227d20aaf061cd9134f1a\$lut for cells of type $lut.
+Using template $paramod$ce88a07e5daedccb83da75f9d59eca961dd56f6e\$lut for cells of type $lut.
+Using template $paramod$69a5ae05931d127c0c96924e96c363eab126f149\$lut for cells of type $lut.
+Using template $paramod$3a32a7587b9f95b908af04fb9b75cd3eae00b58e\$lut for cells of type $lut.
+Using template $paramod$cb36ef92affcffabd3b3ad7fae7aeed3ade9339d\$lut for cells of type $lut.
+Using template $paramod$ef3157df45507300ca6f9a3271db882b7a8115ef\$lut for cells of type $lut.
+Using template $paramod$1f8892ab13f1235a4edbabd542963762c9e2f949\$lut for cells of type $lut.
+Using template $paramod$9426338acd384bec95a262bf99fc688ef895ae1a\$lut for cells of type $lut.
+Using template $paramod$52512c8d4014892951d04c4e1d4a5c48ad035474\$lut for cells of type $lut.
+Using template $paramod$7b72030d2a4aaa70912590a02e33e0a7c5cf9495\$lut for cells of type $lut.
+Using template $paramod$2acc56796dae1e7bbd8d34441a24f749523f3d30\$lut for cells of type $lut.
+Using template $paramod$8b9634e7dfa008c33d9ee399743b05f598f2abc6\$lut for cells of type $lut.
+Using template $paramod$1e05b31d9ef5a73a22c0e9c3140c467da6bb9561\$lut for cells of type $lut.
+Using template $paramod$d96988fde1132d3972547a32d545442198d4c097\$lut for cells of type $lut.
+Using template $paramod$918eac52a256c90863b4a744566642fe61627a42\$lut for cells of type $lut.
+Using template $paramod$518c96f360291f25cd86472b9a0832272316cc81\$lut for cells of type $lut.
+Using template $paramod$8891e00a2073855b038f64057f14e5058d966964\$lut for cells of type $lut.
+Using template $paramod$13751e8f6bea7894ab0b140f7e23110f0c331d90\$lut for cells of type $lut.
+Using template $paramod$fa075f23b3b929bb31a7a3062c7457e542af1ffe\$lut for cells of type $lut.
+Using template $paramod$04ae10f7d848c17f6abdd4c00ba30939b2cb4eb5\$lut for cells of type $lut.
+Using template $paramod$da9d6eb00307d15292e014cd59e5b9098c71b3b1\$lut for cells of type $lut.
+Using template $paramod$a60af7037061c1907b254cb4a9d0ea9780a5770f\$lut for cells of type $lut.
+Using template $paramod$7100edcd99fe51d8dd4ebfc8db69678fced2160e\$lut for cells of type $lut.
+Using template $paramod$b6baf71ad9814632ed49ddd27b8de4b6fbb39f17\$lut for cells of type $lut.
+Using template $paramod$47020bdfabdd25aacec1132f7cf5488ae3cc26dd\$lut for cells of type $lut.
+Using template $paramod$7265a0bdb1ccd5720b491a5d017ebe08bc41c5c5\$lut for cells of type $lut.
+Using template $paramod$8461a38da2644081983cd5b082d7f6c55a8dc5b7\$lut for cells of type $lut.
+Using template $paramod$4ffc9c1b861b4422389f7152c45020a8aff79770\$lut for cells of type $lut.
+Using template $paramod$1cc4ead1be7d20343e835592d0565bc12283c933\$lut for cells of type $lut.
+Using template $paramod$d8fa270f64ca5c2e2296dc4f613aedb5b3fe2ca0\$lut for cells of type $lut.
+Using template $paramod$82a48e5f5771a531ca9edba4cc6af5165f5035d5\$lut for cells of type $lut.
+Using template $paramod$cb9389d3bcc7824cbc8eb11c8ac4986b2acbae18\$lut for cells of type $lut.
+Using template $paramod$0c4b129b45d361fbc3e8da186974eb6fb9d71dd3\$lut for cells of type $lut.
+Using template $paramod$7be5ba6537bbd61f594c56628aabac8a2fd8927a\$lut for cells of type $lut.
+Using template $paramod$d8ce67cd4489b02c4ed7256c47f4a3db429cd3eb\$lut for cells of type $lut.
+Using template $paramod$4b6d71ecc8170bfacf38b3b71c1a9b261b163b05\$lut for cells of type $lut.
+Using template $paramod$55fd3f54a2cbf538e4c0f5b019dcd6cb7c7c5d70\$lut for cells of type $lut.
+Using template $paramod$481237a5a0d6685e5015cfad2d6072bc6f67e62f\$lut for cells of type $lut.
+Using template $paramod$6180c0076fd7fc899077f833212f7fa4966918da\$lut for cells of type $lut.
+Using template $paramod$67bbcb6000d1f7329f0782c65a3ca97e5a912b9f\$lut for cells of type $lut.
+Using template $paramod$d0b7dd04358177b9457a775402a547e42863d994\$lut for cells of type $lut.
+Using template $paramod$361873847dbc2d640b1456b9fb3ff9ca8cd0a9fc\$lut for cells of type $lut.
+Using template $paramod$789055cea4464c1696b70a6ebc8f3a5344a77de1\$lut for cells of type $lut.
+Using template $paramod$861911dc8bcc0f2ba862b3105e72774369e953fe\$lut for cells of type $lut.
+Using template $paramod$e0b192dcf742212c7befd720b774997b20cd9310\$lut for cells of type $lut.
+Using template $paramod$f5dc18b5fe541b9bb59e9b9dac4747169902f3a8\$lut for cells of type $lut.
+Using template $paramod$193ea305f5cc73521a69756d32eb9300a94d4fad\$lut for cells of type $lut.
+Using template $paramod$26c6eee984c99ab7c3bb4a85cab5854f70684cc5\$lut for cells of type $lut.
+Using template $paramod$347cfd93d8fc6679eb4cbb051eea45fcd29827cf\$lut for cells of type $lut.
+Using template $paramod$514744e2c14112fdcf144a3e5286388381ad2088\$lut for cells of type $lut.
+Using template $paramod$d0cd6a9d7c52b0715403a068567e3d5e25253e90\$lut for cells of type $lut.
+Using template $paramod$21059bb7e70238b8aa8e4aef5b51125f1503320a\$lut for cells of type $lut.
+No more expansions possible.
+<suppressed ~4952 debug messages>
+
+5.25. Executing OPT_LUT_INS pass (discard unused LUT inputs).
+Optimizing LUTs in signed_mult8_wrapper.
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$1352.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$1352.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$1352.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1352.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1352.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$737.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1352.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$972.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$866.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$866.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$627.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$627.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$737.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$737.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$737.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$737.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$678.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1352.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1352.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1145.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1094.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1286.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$1636.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
+  Optimizing lut $auto$abc9_ops.cc:1550:reintegrate$4702.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$1832.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$737.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$784.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$737.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$4698$lut$aiger4697$737.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$588.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$749.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 3)
+  Optimizing lut $abc$4698$lut$aiger4697$507.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$972.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$4698$lut$aiger4697$1688.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
+
+5.26. Executing SETUNDEF pass (replace undef values with defined constants).
+
+5.27. Executing HILOMAP pass (mapping to constant drivers).
+
+5.28. Executing SPLITNETS pass (splitting up multi-bit signals).
+Removed 0 unused cells and 2780 unused wires.
+
+5.29. Executing AUTONAME pass.
+Renamed 11289 objects in module signed_mult8_wrapper (51 iterations).
+<suppressed ~1214 debug messages>
+
+5.30. Executing HIERARCHY pass (managing design hierarchy).
+
+5.30.1. Analyzing design hierarchy..
+Top module:  \signed_mult8_wrapper
+
+5.30.2. Analyzing design hierarchy..
+Top module:  \signed_mult8_wrapper
+Removed 0 unused modules.
+
+5.31. Printing statistics.
+
+=== signed_mult8_wrapper ===
+
+   Number of wires:                715
+   Number of wire bits:            715
+   Number of public wires:         715
+   Number of public wire bits:     715
+   Number of ports:                 23
+   Number of port bits:             23
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                639
+     $scopeinfo                      2
+     ALU                            16
+     DFF                            16
+     DFFE                           58
+     GND                             1
+     IBUF                           15
+     LUT1                           46
+     LUT2                           48
+     LUT3                           63
+     LUT4                          184
+     MUX2_LUT5                     117
+     MUX2_LUT6                      41
+     MUX2_LUT7                      17
+     MUX2_LUT8                       6
+     OBUF                            8
+     VCC                             1
+
+5.32. Executing CHECK pass (checking for obvious problems).
+Checking module signed_mult8_wrapper...
+Found and reported 0 problems.
+
+5.33. Executing Verilog backend.
+
+5.33.1. Executing BMUXMAP pass.
+
+5.33.2. Executing DEMUXMAP pass.
+Dumping module `\signed_mult8_wrapper'.
+
+6. Printing statistics.
+
+=== signed_mult8_wrapper ===
+
+   Number of wires:                715
+   Number of wire bits:            715
+   Number of public wires:         715
+   Number of public wire bits:     715
+   Number of ports:                 23
+   Number of port bits:             23
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                639
+     $scopeinfo                      2
+     ALU                            16
+     DFF                            16
+     DFFE                           58
+     GND                             1
+     IBUF                           15
+     LUT1                           46
+     LUT2                           48
+     LUT3                           63
+     LUT4                          184
+     MUX2_LUT5                     117
+     MUX2_LUT6                      41
+     MUX2_LUT7                      17
+     MUX2_LUT8                       6
+     OBUF                            8
+     VCC                             1
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 0f2982702d, CPU: user 0.78s system 0.03s, MEM: 74.82 MB peak
+Yosys 0.41+111 (git sha1 4b67f3757, clang++ 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 26% 1x abc9_exe (0 sec), 26% 8x techmap (0 sec), ...

@@ -1,0 +1,14 @@
+#
+## Poorman's Standard-Emulator by GoodKook, goodkook@gmail.com
+### Yosys script targetting GoWin's FPGA
+#
+#   yosys signed_mult8_wrapper.ys | tee synthesis.log
+#
+read_verilog ../../signed_mult8_wrapper.v
+read_verilog ../../../source/signed_mult8.v
+read_verilog ../../../source/signed_multiplier.v
+
+hierarchy -check -top signed_mult8_wrapper
+
+synth_gowin -top signed_mult8_wrapper -vout signed_mult8_wrapper.v
+stat
